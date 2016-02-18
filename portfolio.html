@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>	
+    <title>Portfolio: Polosko Custom Woodworks, Richmond, VA</title>
+    <meta name="keywords" content="woodworks,woodworking,cabinets,casements,richmond,virginia,va" />
+    <meta name="description" content="Polosko Custom Woodworks Portfolio of Richmond, Virginia." />
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> 
+
+    <style type="text/css">
+        
+        .normalPhotoLeft
+        {
+	        width:230px; float: left; border: none; height: 386px; position: relative;margin-top:9px; padding: 0px 0px 0px 0px;
+	        /* border: thin solid black; */
+        }
+        
+        .normalReaderFrame
+        {
+	        padding-left:40px;width:190px;
+	        /* border:thin dashed red;	        */
+        }                
+                
+        .normalPhoto 
+        {
+	        float: right;
+	        width: 565px;
+	        /* border: thin solid black;	        */
+	        height: 440px;	        
+	        display:none;
+        }
+        
+        .widePhotoLeft
+        {
+	        width:265px; float: left; border: none; height: 386px; position: relative;margin-top:9px; padding: 0px 0px 0px 0px;
+	        border: thin solid black;
+        }
+        
+        .wideReaderFrame
+        {
+	        padding-left:40px;width:195px;border:thin dashed red;	        
+        }                
+                
+        .widePhoto 
+        {
+	        float: right;
+	        width: 565px;
+	        border: thin solid black;	        
+	        height: 440px;	        
+	        display:none;
+        }
+        
+    </style>
+ 
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cantarell" />-->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>        
+ 
+    <script type="text/javascript">
+/* <![CDATA[ */   
+    function removeArrows() {     
+        $(".innerLink").each(function(idx, item) {                                       
+        if (item.innerHTML.charCodeAt(0) == 8594) {
+                item.innerHTML = item.innerHTML.substring(1);
+            }              
+        });
+    }
+
+    function openPC(category, num, sender) 
+    {                        
+        $("#defaultPhotos").hide();
+        $("#photoDiv").show();
+
+        removeArrows();
+                                                        
+        sender.innerHTML = "&rarr;" + sender.innerHTML;
+                
+        $("#iframe1").attr("src","portfolio/" + category + "_" + num + ".html");                        
+        $("#iframe2").show().attr("src", "portfolio/text_" + category + "_" + num + ".html");               
+    }
+    
+    function openMenu(mySection)
+    {                       
+      $(".submenu").each(function(idx, item) {                                       
+        if (("d_"+mySection == item.id) && ($(this).css('display') == 'none')) {
+           $(this).show();
+           $("#a_"+item.id.substring(2)).css('color','#f56534');
+           $("#iframe1").attr("src","portfolio/empty.html");          
+        }        
+        else if (("d_"+mySection == item.id) && ($(this).css('display') == 'block')) {
+           $(this).hide();
+           $("#iframe1").attr("src","portfolio/empty.html");
+           removeArrows();
+        }
+        else {
+           $(this).hide();
+           $("#a_"+item.id.substring(2)).css('color','#000000');
+           removeArrows();
+        }               
+      });
+                         
+      $("#iframe2").attr("src","portfolio/text_empty.html");      
+      $("#defaultPhotos").show();
+    }
+/* ]]>  */  
+    </script>
+</head>
+<body class="defaultBody"> 
+<div id="mainContent">  
+  <a href="main.html"> 
+    <img src="images/polosko_banner.png" width="800" alt="polosko logo" title="" style="margin-top:45px;"/> </a>
+  
+  <div id="mainMenu">    
+    <a href="#">                <img src="images/menu_portfolio_hl.gif" alt="portfolio page" title=""/></a>
+    <a href="about.html">       <img src="images/menu_about.gif" onmouseover="this.src='images/menu_about_hl.gif'" onmouseout="this.src='images/menu_about.gif'" alt="about page" title=""/></a>
+    <a href="process.html">     <img src="images/menu_process.gif" onmouseover="this.src='images/menu_process_hl.gif'" onmouseout="this.src='images/menu_process.gif'"  alt="process page" title=""/></a>
+    <a href="materials.html">   <img src="images/menu_materials.gif" onmouseover="this.src='images/menu_materials_hl.gif'" onmouseout="this.src='images/menu_materials.gif'" alt="materials page" title=""/></a>
+    <a href="contact.html">     <img src="images/menu_contact.gif" onmouseover="this.src='images/menu_contact_hl.gif'" onmouseout="this.src='images/menu_contact.gif'" alt="contact page" title=""/></a>       
+  </div>
+
+  <div id="defaultPhotos" style="position:absolute; top:375px; right: 0px;">     
+      <img src="images/homepage_photo_1.jpg" alt="homepage photo 1" title="" style="display:inline;margin-right: 7px; "/> 
+      <img src="images/homepage_photo_2.jpg" alt="homepage photo 2" title="" style="display:inline;margin-right: 7px; "/> 
+      <img src="images/homepage_photo_3.jpg" alt="homepage photo 3" title="" style="display:inline;margin-right: 7px; "/> 
+      <img src="images/homepage_photo_4.jpg" alt="homepage photo 4" title="" style="display:inline;"/>  
+  </div>
+  
+  <div id="leftDiv" class="normalPhotoLeft">   
+    <div style="margin-left: 40px;">
+      <a id="a_residential" href="#" onclick="openMenu('residential');">residential </a>      
+      <div id="d_residential" class="submenu" style="display:none; border: none; font-size:10px;padding-left:10px;">        
+        <a class="innerLink" href="#" onclick="openPC('residential','4', this);">zaitoun</a>  <br />
+        <a class="innerLink"  href="#" onclick="openPC('residential','1', this);">dealto</a>  <br />
+        <a class="innerLink"  href="#" onclick="openPC('residential','3', this);">roberts</a>  <br />
+        <a class="innerLink"  href="#" onclick="openPC('residential','2', this);">little</a>
+      </div>  
+      <br />
+      <a id="a_commercial"  href="#" onclick="openMenu('commercial');">commercial </a>
+      <div id="d_commercial" class="submenu" style="display:none; border: none; font-size:10px;padding-left:10px;">
+        <a class="innerLink"  href="#" onclick="openPC('commercial','5', this);">rivers ridge</a>  <br />
+        <a class="innerLink"  href="#" onclick="openPC('commercial','2', this);">buddy's</a>  <br />
+        <a class="innerLink"  href="#" onclick="openPC('commercial','1', this);">adam</a>  <br />         
+        <a class="innerLink"  href="#" onclick="openPC('commercial','6', this);">shields market</a>  <br />         
+        <a class="innerLink"  href="#" onclick="openPC('commercial','3', this);">joe's inn</a>  <br />         
+        <a class="innerLink"  href="#" onclick="openPC('commercial','4', this);">potomac river running</a>                  
+      </div>
+      <br />
+      <a id="a_furniture"  href="#" onclick="openMenu('furniture');">furniture </a>            
+      <div id="d_furniture" class="submenu" style="display:none; border: none; font-size:10px;padding-left:10px;">
+        <a class="innerLink"  href="#" onclick="openPC('furniture','1', this);">helena's dresser</a>  <br />          
+        <a class="innerLink"  href="#" onclick="openPC('furniture','3', this);">dining table</a>  <br />          
+        <a class="innerLink"  href="#" onclick="openPC('furniture','6', this);">brady console</a>  <br />          
+        <a class="innerLink"  href="#" onclick="openPC('furniture','2', this);">chair</a>  <br />          
+        <a class="innerLink"  href="#" onclick="openPC('furniture','5', this);">1 degree boxes</a>  <br />          
+        <a class="innerLink"  href="#" onclick="openPC('furniture','7', this);">storage boxes</a>  <br />          
+        <a class="innerLink"  href="#" onclick="openPC('furniture','4', this);">dog bowl</a>          
+      </div>           
+    </div>     
+    
+    <!--border: thin solid red;-->
+    <div id="desc_div" style="position:absolute; bottom:0; left:0;" >    
+       <iframe src="portfolio/text_empty.html" id="iframe2" frameborder="0" class="normalReaderFrame">
+       </iframe>              
+    </div>                        
+  </div>
+        
+  <div id="photoDiv" class="normalPhoto">
+    <iframe src="portfolio/empty.html" id="iframe1" frameborder="0" style="height: 100%; width: 100%;">
+    </iframe>
+  </div>  
+    
+</div>
+
+<div id="footer">&copy;2016 Polosko</div>  
+
+</body>
+</html>
+     
+  
+  

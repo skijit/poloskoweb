@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+         
+    <script type="text/javascript">
+        function showImg(imageNumber) {
+
+            /*
+            var r = document.getElementById('spacer');
+            r.style.display = "none";
+            */
+            
+            for (var i = 1; i <= 2; i++) {
+                var cur = document.getElementById('portfolioImg_' + i);
+                var imgIndex = document.getElementById("pIndex" + i);
+
+                if (i == imageNumber) {
+                    cur.style.display = 'block';
+                    imgIndex.style.color = "#F56534";
+                }
+                else {
+                    cur.style.display = 'none';
+                    imgIndex.style.color = "black";
+                }
+
+            }
+
+        }
+
+
+    </script>
+</head>
+<body class="body_trebuchet_bold" style="margin: 0px; padding:0px;">
+    
+    <!--<img id="spacer" src="/images/spacer.jpg"                     style="border: solid 1px white; border-right:none;  margin: 10px 0px 5px 5px;float:right;display:block;" alt="portfolio page 1" title=""/>-->
+    <img id="portfolioImg_1" src="/portfolio/photos/p.f.04.1.jpg" style="border:solid 1px black; border-right:none; margin: 10px 0px 5px 5px;float:right;display:block;" alt="portfolio page 1" title=""/>
+    <img id="portfolioImg_2" src="/portfolio/photos/p.f.04.2.jpg" style="border:solid 1px black; border-right:none; margin: 10px 0px 5px 5px;float:right;display:none;" alt="portfolio page 1" title=""/>
+    
+    
+    <div id="pagination" style="border:none; clear:right; margin:5px 10px 5px 0px; text-align:right;" >
+      <a href="#" style="text-decoration:none;color:#F56534;" id = "pIndex1" onclick="showImg(1);"> 1 </a> &nbsp;
+      <a href="#" style="text-decoration:none;" id = "pIndex2" onclick="showImg(2);"> 2 </a>
+      
+  </div>    
+  
+</body>
+</html>
