@@ -1,0 +1,75 @@
+.defaultBody 
+{
+	font-family:      Verdana, 'Cantarell', Trebuchet MS, Tahoma, Verdana, Sans-Serif;
+    color:            black;
+    font-size:        12px;    
+}
+
+.defaultBodyBold
+{
+	font-family:	  Verdana, 'Cantarell', Trebuchet MS, Tahoma, Verdana, Sans-Serif;
+	font-weight:	  bold;
+    color:            black;
+    font-size:        12px;    
+}
+
+.defaultMain
+{
+	font-family:	  Verdana, 'Cantarell', Trebuchet MS, Tahoma, Verdana, Sans-Serif;
+	font-weight:	  bold;
+    color:            black;
+    font-size:        medium;    
+}
+
+.inputField
+{
+	font-family:      Verdana, 'Cantarell', Trebuchet MS, Tahoma, Verdana, Sans-Serif;
+    color:            black;
+    font-size:        12px;    	
+}
+
+#mainContent {    
+    width:            800px;
+    padding-top:      5px;
+    padding-bottom:   5px;
+    margin-left:      auto;
+    margin-right:     auto;        
+    border-left:      solid 1px black;
+    border-right:     solid 1px black;
+    border-bottom:    none;
+    border-top:       solid 1px black;
+    height:           590px;    /* by default overruns are visible-- todo: probably remove this */
+    position: relative;
+          
+}
+
+#footer {
+    width:            800px;
+    height:           10px;
+    padding-top:      5px;
+    padding-bottom:   5px;
+    margin-left:      auto;
+    margin-right:     auto;
+    text-align:       center;
+    font-weight:      normal;
+    font-size:        9px;
+    border-left:      solid 1px black;
+    border-right:     solid 1px black;
+    border-bottom:    solid 1px black;
+    border-top:       none;
+    clear:            both;
+}
+
+img { border: 0px; }  /* this turns off the ugly outline around gifs surrounded by links */
+
+a { outline: none; }
+
+a:link, a:visited, a:active {text-decoration: none; color: Black; font-weight: normal;}
+
+
+
+
+
+
+
+
